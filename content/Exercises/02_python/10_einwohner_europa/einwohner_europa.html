@@ -45,12 +45,11 @@
     <script src="../../../../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="../../../../_static/sphinx-thebe.js"></script>
     <link rel="canonical" href="https://firedynamics.github.io/LectureComputerScience/content/Exercises/02_python/10_einwohner_europa/einwohner_europa.html" />
     <link rel="shortcut icon" href="../../../../_static/cce_logo_standalone_icon.png"/>
@@ -1125,7 +1124,7 @@
 <p>Schreiben Sie ein Programm, dass den Inhalt der Datei <code class="docutils literal notranslate"><span class="pre">einwohner_europa_2019.csv</span></code> ausließt und ausgibt.</p>
 <div class="section" id="losungsvorschlag">
 <h3>Lösungsvorschlag<a class="headerlink" href="#losungsvorschlag" title="Permalink to this headline">¶</a></h3>
-<div class="cell tag_loesung docutils container">
+<div class="cell tag_loesung tag_hide_cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Auslesen und Ausgeben einer Datei</span>
 
@@ -1211,7 +1210,7 @@ Vereinigtes Koenigreich,66647112
 </div>
 <div class="section" id="losungsvorschlag-i">
 <h3>Lösungsvorschlag I<a class="headerlink" href="#losungsvorschlag-i" title="Permalink to this headline">¶</a></h3>
-<div class="cell tag_loesung docutils container">
+<div class="cell tag_loesung tag_hide_cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Auslesen einer Datei und Speichern in Listen</span>
 
@@ -1256,7 +1255,7 @@ Vereinigtes Koenigreich,66647112
 </div>
 <div class="section" id="losungsvorschlag-ii">
 <h3>Lösungsvorschlag II<a class="headerlink" href="#losungsvorschlag-ii" title="Permalink to this headline">¶</a></h3>
-<div class="cell tag_loesung docutils container">
+<div class="cell tag_loesung tag_hide_cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Auslesen einer Datei und Speichern in Listen</span>
 
@@ -1302,7 +1301,7 @@ Vereinigtes Koenigreich,66647112
 </div>
 <div class="section" id="id2">
 <h3>Lösungsvorschlag<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
-<div class="cell tag_loesung docutils container">
+<div class="cell tag_loesung tag_hide_cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Auswerten von Daten</span>
 

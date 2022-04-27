@@ -45,15 +45,14 @@
     <script src="../../../../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../../../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
-    <script async="async" src="../../../../_static/sphinx-thebe.js"></script>
     <link rel="canonical" href="https://firedynamics.github.io/LectureComputerScience/content/Exercises/04_numerik/05_ableitungsfunktion/ableitungsfunktion.html" />
     <link rel="shortcut icon" href="../../../../_static/cce_logo_standalone_icon.png"/>
     <link rel="index" title="Index" href="../../../../genindex.html" />
@@ -1199,7 +1198,7 @@
 <p>Die analytische Ableitung der Funktion <span class="math notranslate nohighlight">\(\sf y(x)\)</span> lautet</p>
 <div class="math notranslate nohighlight">
 \[ \sf y'(x) = - 2(x-2)e^{-(x-2)^2} \]</div>
-<div class="cell tag_loesung docutils container">
+<div class="cell tag_loesung tag_hide_cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
@@ -1207,7 +1206,7 @@
 </div>
 </div>
 </div>
-<div class="cell tag_loesung docutils container">
+<div class="cell tag_loesung tag_hide_cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
 <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
@@ -1216,7 +1215,7 @@
 </div>
 </div>
 </div>
-<div class="cell tag_loesung docutils container">
+<div class="cell tag_loesung tag_hide_cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;y(x)&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">yp</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;y</span><span class="se">\&#39;</span><span class="s1">(x)&#39;</span><span class="p">)</span>
@@ -1255,7 +1254,7 @@
 </div>
 <div class="section" id="id2">
 <h3>Lösungsvorschlag<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
-<div class="cell tag_loesung docutils container">
+<div class="cell tag_loesung tag_hide_cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Definition der Anzahl der Stützstellen für die Diskretisierung</span>
 <span class="n">nx</span> <span class="o">=</span> <span class="mi">20</span>
@@ -1282,7 +1281,7 @@
 <img alt="../../../../_images/ableitungsfunktion_14_0.png" src="../../../../_images/ableitungsfunktion_14_0.png" />
 </div>
 </div>
-<div class="cell tag_loesung docutils container">
+<div class="cell tag_loesung tag_hide_cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Erstellung eines Arrays für die numerische Ableitung</span>
 <span class="n">yip</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">yi</span><span class="p">)</span>
@@ -1331,7 +1330,7 @@
 </div>
 <div class="section" id="id4">
 <h3>Lösungsvorschlag<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
-<div class="cell tag_loesung docutils container">
+<div class="cell tag_loesung tag_hide_cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Definition einer Hilfsfunktion</span>
 <span class="k">def</span> <span class="nf">ableitung_f1</span><span class="p">(</span><span class="n">nx</span><span class="p">):</span>
@@ -1360,7 +1359,7 @@
 </div>
 </div>
 </div>
-<div class="cell tag_loesung docutils container">
+<div class="cell tag_loesung tag_hide_cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Analytische Ableitung als Funktion</span>
 <span class="k">def</span> <span class="nf">ableitung_analytisch</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
@@ -1369,7 +1368,7 @@
 </div>
 </div>
 </div>
-<div class="cell tag_loesung docutils container">
+<div class="cell tag_loesung tag_hide_cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Ausgabe für den Lösungshinweis nx = 20</span>
 <span class="n">xi</span><span class="p">,</span> <span class="n">yip</span> <span class="o">=</span> <span class="n">ableitung_f1</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
@@ -1391,7 +1390,7 @@
 <img alt="../../../../_images/ableitungsfunktion_21_1.png" src="../../../../_images/ableitungsfunktion_21_1.png" />
 </div>
 </div>
-<div class="cell tag_loesung docutils container">
+<div class="cell tag_loesung tag_hide_cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Ausgabe für den Lösungshinweis nx = 80</span>
 <span class="n">xi</span><span class="p">,</span> <span class="n">yip</span> <span class="o">=</span> <span class="n">ableitung_f1</span><span class="p">(</span><span class="mi">80</span><span class="p">)</span>
@@ -1413,7 +1412,7 @@
 <img alt="../../../../_images/ableitungsfunktion_22_1.png" src="../../../../_images/ableitungsfunktion_22_1.png" />
 </div>
 </div>
-<div class="cell tag_loesung docutils container">
+<div class="cell tag_loesung tag_hide_cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">nx</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">20</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">80</span><span class="p">]:</span>
     <span class="n">xi</span><span class="p">,</span> <span class="n">yip</span> <span class="o">=</span> <span class="n">ableitung_f1</span><span class="p">(</span><span class="n">nx</span><span class="p">)</span>
@@ -1471,7 +1470,7 @@
 </div>
 <div class="section" id="id7">
 <h3>Lösungsvorschlag<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
-<div class="cell tag_loesung docutils container">
+<div class="cell tag_loesung tag_hide_cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Definition einer Hilfsfunktion, jetzt mit der Randberechnung </span>
 <span class="c1"># zweiter Ordnung</span>
@@ -1501,7 +1500,7 @@
 </div>
 </div>
 </div>
-<div class="cell tag_loesung docutils container">
+<div class="cell tag_loesung tag_hide_cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Ausgabe für den Lösungshinweis nx = 80</span>
 <span class="n">xi</span><span class="p">,</span> <span class="n">yip</span> <span class="o">=</span> <span class="n">ableitung_f2</span><span class="p">(</span><span class="mi">80</span><span class="p">)</span>
@@ -1521,7 +1520,7 @@
 <img alt="../../../../_images/ableitungsfunktion_31_0.png" src="../../../../_images/ableitungsfunktion_31_0.png" />
 </div>
 </div>
-<div class="cell tag_loesung docutils container">
+<div class="cell tag_loesung tag_hide_cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Vergleichende Ausgabe</span>
 <span class="n">xi</span><span class="p">,</span> <span class="n">yip_f1</span> <span class="o">=</span> <span class="n">ableitung_f1</span><span class="p">(</span><span class="mi">80</span><span class="p">)</span>

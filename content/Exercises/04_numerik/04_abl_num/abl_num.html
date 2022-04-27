@@ -45,15 +45,14 @@
     <script src="../../../../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../../../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
-    <script async="async" src="../../../../_static/sphinx-thebe.js"></script>
     <link rel="canonical" href="https://firedynamics.github.io/LectureComputerScience/content/Exercises/04_numerik/04_abl_num/abl_num.html" />
     <link rel="shortcut icon" href="../../../../_static/cce_logo_standalone_icon.png"/>
     <link rel="index" title="Index" href="../../../../genindex.html" />
@@ -1131,11 +1130,11 @@
 <p>In dieser Übungsaufgabe werden Sie 2 Näherungen der 1. Ableitung einer Funktion implementieren und deren Genauigkeit analysieren.</p>
 <div class="section" id="aufgabenteil-a">
 <h2>Aufgabenteil A<a class="headerlink" href="#aufgabenteil-a" title="Permalink to this headline">¶</a></h2>
-<p>Schreiben Sie die Funktion<code class="docutils literal notranslate"><span class="pre">ableitung_o1(funk,</span> <span class="pre">x,</span> <span class="pre">h)</span></code>, die für eine beliebige übergebene Funktion die 1. Ableitung 1. Ordnung der Funktion an allen Stellen des Arrays x berechnet und das Ergebnis als Array wieder zurück gibt. Sie können Funktionen wie Variablen übergeben und dann mit dem zugewiesenen Namen, hier <code class="docutils literal notranslate"><span class="pre">funk</span></code>, auf diese zugreifen.</p>
+<p>Schreiben Sie die Funktion <code class="docutils literal notranslate"><span class="pre">ableitung_o1(funk,</span> <span class="pre">x,</span> <span class="pre">h)</span></code>, die für eine beliebige übergebene Funktion die 1. Ableitung 1. Ordnung der Funktion an allen Stellen des Arrays x berechnet und das Ergebnis als Array wieder zurück gibt. Sie können Funktionen wie Variablen übergeben und dann mit dem zugewiesenen Namen, hier <code class="docutils literal notranslate"><span class="pre">funk</span></code>, auf diese zugreifen.</p>
 <p>Schreiben Sie zusätzlich eine Funktion <code class="docutils literal notranslate"><span class="pre">ableitung_02(funk,</span> <span class="pre">x,</span> <span class="pre">h)</span></code>, die die Ableitung 2. Ordnung berechnet.</p>
 <div class="section" id="losungsvorschlag">
 <h3>Lösungsvorschlag<a class="headerlink" href="#losungsvorschlag" title="Permalink to this headline">¶</a></h3>
-<div class="cell tag_loesung docutils container">
+<div class="cell tag_loesung tag_hide_cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
@@ -1168,7 +1167,7 @@ auf jedes Element des Arrays anwendet und alle berechneten Werte wieder als Arra
 <p>Berechnen Sie analytisch die Ableitung der Funktion <span class="math notranslate nohighlight">\(f(x)\)</span> und implementieren Sie diese nach dem gleichen Prinzip.</p>
 <div class="section" id="id1">
 <h3>Lösungsvorschlag<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
-<div class="cell tag_loesung docutils container">
+<div class="cell tag_loesung tag_hide_cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">x</span><span class="o">**</span><span class="mi">3</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span>
@@ -1186,7 +1185,7 @@ auf jedes Element des Arrays anwendet und alle berechneten Werte wieder als Arra
 <p>Schreiben Sie ein Programm, welches die Genauigkeit der numerischen Lösungen mit der analytischen vergleicht. Werten Sie dazu alle drei Ableitungsfunktionen an jeweils 10 beliebigen Stellen für alle <span class="math notranslate nohighlight">\(h \in \{1, 10^{-1}, 10^{-2}, ..., 10^{-15}\}\)</span> aus. Bestimmen Sie die Differenzen zwischen der analytischen Lösung und den numerischen und bilden Sie immer den Mittelwert über die 10 Stellen. Plotten Sie die Differenzen doppelt logaritmisch gegen <span class="math notranslate nohighlight">\(h\)</span>.</p>
 <div class="section" id="id2">
 <h3>Lösungsvorschlag<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
-<div class="cell tag_loesung docutils container">
+<div class="cell tag_loesung tag_hide_cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 

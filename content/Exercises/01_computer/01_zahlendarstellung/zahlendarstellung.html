@@ -45,15 +45,14 @@
     <script src="../../../../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../../../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
-    <script async="async" src="../../../../_static/sphinx-thebe.js"></script>
     <link rel="canonical" href="https://firedynamics.github.io/LectureComputerScience/content/Exercises/01_computer/01_zahlendarstellung/zahlendarstellung.html" />
     <link rel="shortcut icon" href="../../../../_static/cce_logo_standalone_icon.png"/>
     <link rel="index" title="Index" href="../../../../genindex.html" />
@@ -1272,7 +1271,7 @@
 </tbody>
 </table>
 <p>In diesem Beispiel wird eine Gleitkommazahl <span class="math notranslate nohighlight">\(a\)</span> wie folgt durch das Vorzeichen <span class="math notranslate nohighlight">\(s\)</span>, die Mantisse <span class="math notranslate nohighlight">\(m\)</span> umd den Exponenten <span class="math notranslate nohighlight">\(e\)</span> abgebildet:
-<span class="math notranslate nohighlight">\(a = -1^{s} \cdot (1.0+m) \cdot 2^{e-3}\)</span></p>
+<span class="math notranslate nohighlight">\(a = (-1)^{s} \cdot (1.0+m) \cdot 2^{e-3}\)</span></p>
 <p>Zur Umwandlung von der binären Darstellung in eine Gleitkommazahl sind folgende Schritte notwendig. Diese werden anhand der Bitfolge 11011011<sub>2</sub> verdeutlicht.</p>
 <div class="section" id="schritt-0">
 <h4>Schritt 0<a class="headerlink" href="#schritt-0" title="Permalink to this headline">¶</a></h4>
@@ -1450,7 +1449,7 @@
 <p>Allerdings ist dies keine darstellbare Zahl in diesem Format und wird zu 1.30000007153 umgewandelt. Dies entspricht aber nicht der Darstellung von 1.3, welche 1.29999995232 wäre. Das bedeutet, dass bei der Berechnung obiger Summe folgende Ausgabe zu erwarten wäre</p>
 <div class="math notranslate nohighlight">
 \[ \sf 0.2 + 1.1 = 1.30000007153 .\]</div>
-<div class="cell tag_loesung docutils container">
+<div class="cell tag_loesung tag_hide_cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="n">np</span><span class="o">.</span><span class="n">set_printoptions</span><span class="p">(</span><span class="n">precision</span><span class="o">=</span><span class="mi">11</span><span class="p">,</span> <span class="n">floatmode</span><span class="o">=</span><span class="s1">&#39;fixed&#39;</span><span class="p">)</span>

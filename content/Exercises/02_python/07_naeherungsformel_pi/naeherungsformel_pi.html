@@ -45,15 +45,14 @@
     <script src="../../../../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../../../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
-    <script async="async" src="../../../../_static/sphinx-thebe.js"></script>
     <link rel="canonical" href="https://firedynamics.github.io/LectureComputerScience/content/Exercises/02_python/07_naeherungsformel_pi/naeherungsformel_pi.html" />
     <link rel="shortcut icon" href="../../../../_static/cce_logo_standalone_icon.png"/>
     <link rel="index" title="Index" href="../../../../genindex.html" />
@@ -1113,7 +1112,7 @@
 </div>
 <div class="section" id="losungsvorschlag">
 <h3>Lösungsvorschlag<a class="headerlink" href="#losungsvorschlag" title="Permalink to this headline">¶</a></h3>
-<div class="cell tag_loesung docutils container">
+<div class="cell tag_loesung tag_hide_cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Funktion zur näherungsweisen Berechnung von π</span>
 <span class="k">def</span> <span class="nf">naeherung_pi</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
@@ -1169,7 +1168,7 @@
 </div>
 <div class="section" id="id2">
 <h3>Lösungsvorschlag<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
-<div class="cell tag_loesung docutils container">
+<div class="cell tag_loesung tag_hide_cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Funktion zur näherungsweisen Berechnung von π</span>
 <span class="k">def</span> <span class="nf">my_pi</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
@@ -1182,7 +1181,7 @@
 </div>
 </div>
 </div>
-<div class="cell tag_loesung docutils container">
+<div class="cell tag_loesung tag_hide_cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Leere Listen, welche mit den N Werten und der zugehörigen </span>
 <span class="c1"># Näherung von π gefüllt werden</span>
@@ -1202,7 +1201,7 @@
 </div>
 </div>
 </div>
-<div class="cell tag_loesung docutils container">
+<div class="cell tag_loesung tag_hide_cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Tabellenkopf</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;N</span><span class="se">\t</span><span class="s2"> ~π</span><span class="se">\t\t\t</span><span class="s2"> ∆π</span><span class="se">\t\t\t</span><span class="s2"> Reduktionsfaktor&quot;</span><span class="p">)</span>
